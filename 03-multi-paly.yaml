@@ -1,14 +1,15 @@
 - name: paly-01
   hosts: local
   connnection: local
+  become: yes
   tasks:
   - name: paly-01 and task-01
     ansible.builtin.debug:
-    msg: "Hello from paly-01 and task-01"
+      msg: "Hello from paly-01 and task-01"
 
   - name: pali-01 and task-02
     ansible.builtin.debug:
-    msg: "Hello from paly-01 and task-02"
+      msg: "Hello from paly-01 and task-02"
 
 - name: paly-02
   hosts: local
@@ -16,8 +17,8 @@
   tasks:
   - name: paly-02 and task-01
     ansible.builtin.debug:
-    msg: "Hello from paly-02 and task-01"
+      msg: "Hello from paly-02 and task-01"
 
   - name: pali-02 and task-02
     ansible.builtin.debug:
-    msg: "Hello from paly-02 and task-02"
+      msg: "Hello from paly-02 and task-02"
