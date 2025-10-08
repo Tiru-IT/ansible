@@ -9,4 +9,4 @@
   tasks:
   - name: varibels print
     ansible.builtin.debug:
-      msg: "course name is: {{ course }}, duration: {{ duration }}, name: {{ lerner }}" 
+      msg: "courses name is: {{ course }}, duration: {{ duration }}, name: {{ lerner }}" 
