@@ -2,6 +2,6 @@
   hosts: local
   connection: local
   tasks:
-  -name: varibels print
+  - name: varibels print
   ansible.builtin.debug:
     msg: "course name is: ansible, duretion: 10HR, name: nani"
