@@ -1,6 +1,6 @@
 - name: play-01
   hosts: local
-  connnection: local
+  connection: local
   become: yes
   tasks:
   - name: play-01 and task-01
@@ -22,3 +22,4 @@
   - name: pali-02 and task-02
     ansible.builtin.debug:
       msg: "Hello from play-02 and task-02"
+
