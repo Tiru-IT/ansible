@@ -7,7 +7,7 @@
     learner: nanimalli
   
   tasks:
-    -name": print the course info
+  - name: print the course info
     vars:
       course: devops with AWS
     ansible.builtin.debug:
