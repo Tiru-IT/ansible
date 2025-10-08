@@ -3,5 +3,5 @@
   connection: local
   tasks:
   - name: varibels print
-  ansible.builtin.debug:
-    msg: "course name is: ansible, duretion: 10HR, name: nani"
+    ansible.builtin.debug:
+      msg: "course name is: ansible, duretion: 10HR, name: nani"
