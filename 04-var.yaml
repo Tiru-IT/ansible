@@ -2,9 +2,9 @@
   hosts: local
   connection: local
   vars:
-  course: ansible
-  duration: 10HR
-  lerner: malli
+    course: ansible
+    duration: 10HR
+    lerner: malli
 
   tasks:
   - name: varibels print
