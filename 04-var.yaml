@@ -1,7 +1,12 @@
 - name: varibels
   hosts: local
   connection: local
+  vars:
+  course: ansible
+  duration: 10HR
+  name: malli
+
   tasks:
   - name: varibels print
     ansible.builtin.debug:
-      msg: "course name is: ansible, duretion: 10HR, name: nani"
+      msg: "course name is: {{ course }}, duration: {{ duration }}, name: {{ name }}" 
