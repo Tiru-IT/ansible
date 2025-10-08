@@ -4,9 +4,9 @@
   vars:
   course: ansible
   duration: 10HR
-  name: malli
+  lerner: malli
 
   tasks:
   - name: varibels print
     ansible.builtin.debug:
-      msg: "course name is: {{ course }}, duration: {{ duration }}, name: {{ name }}" 
+      msg: "course name is: {{ course }}, duration: {{ duration }}, name: {{ lerner }}" 
