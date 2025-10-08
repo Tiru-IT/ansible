@@ -1,0 +1,22 @@
+<satudents>
+    <student>
+        <name>Tiru</name>
+        <date>01-01-01</date>
+        <age>25</age>
+        <skills>
+            <skill>java</skill>
+            <skill>python</skill>
+            <skill>cloud</skill>
+        </skills>
+    </student>
+    <student>
+        <name>Nani</name>
+        <date>01-01-01</date>
+        <age>25</age>
+        <skills>
+            <skill>java</skill>
+            <skill>python</skill>
+            <skill>cloud</skill>
+        </skills>
+    </student>
+</satudents>
