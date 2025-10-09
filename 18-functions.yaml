@@ -1,8 +1,9 @@
 - name: functions
   hosts: local
   connection: local
-  technologies: DevOps, Linux, Shell, Ansible #string
-
+  vars:
+    technologies: DevOps, Linux, Shell, Ansible #string
+    # dictionary == map
 
   tasks:
   - name: default varibules
