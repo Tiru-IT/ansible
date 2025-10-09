@@ -6,8 +6,14 @@
     # dictionary == map
     tags:
       Appilication: payment
-      Environment: dev 
+      Environment: dev
 
+    # list
+    listTags:
+    - key: Appilication
+      value: payment
+    - key: Environment
+      value: dev
 
   tasks:
   - name: default varibules
@@ -19,6 +25,12 @@
     ansible.builtin.debug:
       msg: "technologies are: {{ technologies | split(',') }}"
   
+  # dictionary to list---------->
   - name: convert map to list
     ansible.builtin.debug:
       msg: "Tag are: {{ tags | dict2items }}"
+  
+  # list to map==dictionary--------->
+  - name: convert list into map
+    ansible.builtin.debug:
+      msg: "listTags are: {{ listTags | items2dict }}"
