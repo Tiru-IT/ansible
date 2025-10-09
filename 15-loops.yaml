@@ -1,0 +1,13 @@
+- name: loops
+  hosts: local
+  connection: local
+
+  tasks:
+  - name: check the loops
+    ansible.builtin.debug:
+      msg: "Hello {{ item }}" # item is reserved
+    loop:
+    - nanimalli
+    - nani 
+    - malli 
+    - mk
