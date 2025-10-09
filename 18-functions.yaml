@@ -1,55 +1,39 @@
 - name: functions
   hosts: local
   connection: local
-  become: yes
   vars:
-    technologies: DevOps, Linux, Shell, Ansible #string
+    technologies: DevOps, Linux, Shell, Ansible # string
+    name: "Sivakumar reddy M"
+    gmail: Info@GMAIL.COM
+    ipaddress: "19222.168.0.1"
     # dictionary == map
     tags:
-      Appilication: payment
+      Application: payment
       Environment: dev
-
-    # list
+    # List
     listTags:
-    - key: Appilication
+    - key: Application
       value: payment
     - key: Environment
       value: dev
-
   tasks:
-  - name: default varibules
+  - name: default variable
     ansible.builtin.debug:
-      msg: "Hello, {{ name | default('malli') }}"
-
-  # string to list-------------->   
+      msg: "Hello, {{ name | default('Ramesh') }}"
+    
+  # string to list
   - name: convert string to list
     ansible.builtin.debug:
-      msg: "technologies are: {{ technologies | split(',') }}"
-  
-  # dictionary to list---------->
+      msg: "Technologies are: {{ technologies | split(',') }}"
+
   - name: convert map to list
     ansible.builtin.debug:
-      msg: "Tag are: {{ tags | dict2items }}"
-  
-  # list to map==dictionary--------->
+      msg: "Tags are: {{ tags | dict2items }}"
+
   - name: convert list into map
     ansible.builtin.debug:
-      msg: "listTags are: {{ listTags | items2dict }}"
+      msg: "tag map: {{ listTags | items2dict }}"
 
-  # convert yaml_file into json------->
-
-  # - name: read yaml and take it into varibule
-  #   ansible.builtin.set_fact:
-  #     student_yaml: "{{ lookup('file', 'student.yaml') | from_yaml }}" 
-  
-  # - name: convert yaml into json
-  #   ansible.builtin.debug:
-  #     msg: "json: {{ student_yaml | to_json }}"
-  
-  # - name: save json to file
-  #   ansible.builtin.copy:
-  #     dest: ./student-data.json
-  #     content: "{{ student_yaml | to_nice_json }}"
   - name: read yaml and take it into variable
     ansible.builtin.set_fact:
       student_yaml: "{{ lookup('file', 'student.yaml') | from_yaml }}"
