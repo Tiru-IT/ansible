@@ -4,6 +4,10 @@
   vars:
     technologies: DevOps, Linux, Shell, Ansible #string
     # dictionary == map
+    tags:
+      Appilication: payment
+      Environment: dev 
+
 
   tasks:
   - name: default varibules
@@ -14,3 +18,7 @@
   - name: convert string to list
     ansible.builtin.debug:
       msg: "technologies are: {{ technologies | split(',') }}"
+  
+  - name: convert map to list
+    ansible.builtin.debug:
+      msg: "Tag are: {{ tags | dict2items }}"
