@@ -3,7 +3,7 @@
   connection: local
   become: yes
 
-  tesks:
+  tasks:
   - name: loops
     ansible.builtin.package:
       name: "{{ item.name }}"
